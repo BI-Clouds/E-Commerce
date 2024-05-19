@@ -1,0 +1,77 @@
+﻿@model IEnumerable<E_Commerce.Models.Productos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombreproducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidadstock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdcategoriaNavigation.Nombrecategoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombreproducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+                <td>
+                    <img src="@Url.Action("ObtenerImagen", "Productos", new { id = item.Idproductos })" alt="Imagen del producto" style="max-width: 100px; max-height: 100px;" />
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidadstock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descuento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdcategoriaNavigation.Nombrecategoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idproductos">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idproductos">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idproductos">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

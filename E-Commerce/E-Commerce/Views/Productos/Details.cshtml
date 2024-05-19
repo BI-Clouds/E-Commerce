@@ -1,0 +1,64 @@
+﻿@model E_Commerce.Models.Productos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Productos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombreproducto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombreproducto)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt class="col-sm-2">
+            Imagen
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Url.Action("ObtenerImagen", "Productos", new { id = Model.Idproductos })" alt="Imagen del producto" style="max-width: 200px; max-height: 200px;" />
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cantidadstock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cantidadstock)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+</div>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Idproductos">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Idproductos">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\E-Commerce\\E-Commerce\\E-Commerce\\E-Commerce.csproj": {}
+    "C:\\Nuevo\\E-Commerce\\E-Commerce\\E-Commerce.csproj": {}
   },
   "projects": {
-    "E:\\E-Commerce\\E-Commerce\\E-Commerce\\E-Commerce.csproj": {
+    "C:\\Nuevo\\E-Commerce\\E-Commerce\\E-Commerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\E-Commerce\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+        "projectUniqueName": "C:\\Nuevo\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
         "projectName": "E-Commerce",
-        "projectPath": "E:\\E-Commerce\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
-        "packagesPath": "C:\\Users\\mec45\\.nuget\\packages\\",
-        "outputPath": "E:\\E-Commerce\\E-Commerce\\E-Commerce\\obj\\",
+        "projectPath": "C:\\Nuevo\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+        "packagesPath": "C:\\Users\\Alexis\\.nuget\\packages\\",
+        "outputPath": "C:\\Nuevo\\E-Commerce\\E-Commerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mec45\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alexis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,16 +39,31 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
